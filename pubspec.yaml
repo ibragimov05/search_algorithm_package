@@ -1,5 +1,5 @@
 name: search_algorithm_package
-description: A starting point for Dart libraries or applications.
+description: A Dart package providing various search algorithms including Binary Search, Linear Search, and Jump Search.
 version: 1.0.0
 repository: https://github.com/ibragimov05/search_algorithm_package
 
