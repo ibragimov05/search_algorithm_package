@@ -1,7 +1,7 @@
 name: search_algorithm_package
 description: A starting point for Dart libraries or applications.
 version: 1.0.0
-repository: https://github.com/my_org/my_repo
+repository: https://github.com/ibragimov05/search_algorithm_package
 
 environment:
   sdk: ^3.4.4

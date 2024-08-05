@@ -1,39 +1,59 @@
-<!-- 
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# search_package
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages). 
-
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages). 
--->
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+A Dart package providing various search algorithms including Binary Search, Linear Search, and Jump Search. This package is designed to help developers easily integrate common search algorithms into their Dart applications.
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+- **Linear Search**: A simple search algorithm that checks each element in the list until the target is found or the list ends.
+- **Binary Search**: An efficient search algorithm that works on sorted lists by repeatedly dividing the search interval in half.
+- **Jump Search**: A search algorithm for sorted lists that jumps ahead by fixed steps to find the target.
 
-## Getting started
+## Getting Started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+To use this package, add `search_package` as a dependency in your `pubspec.yaml` file:
 
-## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
-
-```dart
-const like = 'sample';
+```yaml
+dependencies:
+  search_package: ^0.0.1
 ```
 
-## Additional information
+Run ```dart pub get``` to install the package.
 
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
+## Usage
+Here are some examples of how to use the search algorithms provided by this package:
+```import 'package:search_package/search_package.dart';
+
+void main() {
+  // Example list of integers
+  List<int> intList = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+  // Example list of strings
+  List<String> stringList = ['apple', 'banana', 'cherry', 'date', 'elderberry'];
+
+  // Example target values
+  int intTarget = 50;
+  String stringTarget = 'cherry';
+
+  // Using Linear Search
+  print('Linear Search:');
+  int intIndex = SearchAlgorithms.linearSearch(intList, intTarget);
+  print('Index of $intTarget in intList: $intIndex');
+
+  int stringIndex = SearchAlgorithms.linearSearch(stringList, stringTarget);
+  print('Index of $stringTarget in stringList: $stringIndex');
+
+  // Using Binary Search (Note: list must be sorted)
+  print('\nBinary Search:');
+  intIndex = SearchAlgorithms.binarySearch(intList, intTarget);
+  print('Index of $intTarget in intList: $intIndex');
+
+  stringIndex = SearchAlgorithms.binarySearch(stringList, stringTarget);
+  print('Index of $stringTarget in stringList: $stringIndex');
+
+  // Using Jump Search (Note: list must be sorted)
+  print('\nJump Search:');
+  intIndex = SearchAlgorithms.jumpSearch(intList, intTarget);
+  print('Index of $intTarget in intList: $intIndex');
+
+  stringIndex = SearchAlgorithms.jumpSearch(stringList, stringTarget);
+  print('Index of $stringTarget in stringList: $stringIndex');
+}```
